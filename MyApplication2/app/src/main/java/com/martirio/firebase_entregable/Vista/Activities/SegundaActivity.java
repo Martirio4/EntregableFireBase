@@ -229,10 +229,8 @@ public class SegundaActivity extends AppCompatActivity {
     public void descargarFoto(final Paint unaPintura){
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference imagesref = storage.getReference();
-
-        String rutaImagen = unaPintura.getImage();
-
+        StorageReference imagesref = storage.getReference().child("fotos");
+        String rutaImagen = unaPintura.getName();
         StorageReference imageDownload = imagesref.child(rutaImagen);
         imageDownload.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
@@ -246,7 +244,7 @@ public class SegundaActivity extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception exception) {
-                // Handle any errors
+                Toast.makeText(SegundaActivity.this, "no funciono", Toast.LENGTH_SHORT).show();
             }
         });
     }
