@@ -1,4 +1,4 @@
-package com.martirio.firebase_entregable;
+package com.martirio.firebase_entregable.Modelo;
 
 /**
  * Created by elmar on 11/7/2017.

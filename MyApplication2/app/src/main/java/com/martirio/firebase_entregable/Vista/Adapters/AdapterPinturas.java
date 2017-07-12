@@ -1,22 +1,19 @@
-package com.martirio.firebase_entregable;
+package com.martirio.firebase_entregable.Vista.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.BundleCompat;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.martirio.firebase_entregable.Modelo.Paint;
+import com.martirio.firebase_entregable.R;
+import com.martirio.firebase_entregable.Vista.Activities.activityFullScreen;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -54,6 +51,7 @@ public class AdapterPinturas extends RecyclerView.Adapter{
         FragmentActivity unaActivity= (FragmentActivity) context;
         viewCelda = layoutInflater.inflate(R.layout.celda_recycler, parent, false);
         PinturasViewHolder peliculasViewHolder = new PinturasViewHolder(viewCelda);
+
 
         return peliculasViewHolder;
     }
@@ -101,8 +99,12 @@ public class AdapterPinturas extends RecyclerView.Adapter{
         }
 
         public void cargarPintura(Paint unaPintura) {
+            if (unaPintura.getName().length()>24){
 
-            textViewTitulo.setText(unaPintura.getName());
+            }
+            else {
+                textViewTitulo.setText(unaPintura.getName());
+            }
 
             Picasso.with(imageView.getContext())
                     .load(unaPintura.getImage())

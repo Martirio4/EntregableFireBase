@@ -16,7 +16,7 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".Vista.Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,8 +39,8 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".SegundaActivity" />
-        <activity android:name=".activityFullScreen"></activity>
+        <activity android:name=".Vista.Activities.SegundaActivity" />
+        <activity android:name=".Vista.Activities.activityFullScreen"></activity>
     </application>
 
 </manifest>

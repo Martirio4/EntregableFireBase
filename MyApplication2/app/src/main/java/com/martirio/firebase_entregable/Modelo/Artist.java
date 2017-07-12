@@ -1,4 +1,4 @@
-package com.martirio.firebase_entregable;
+package com.martirio.firebase_entregable.Modelo;
 
 import java.util.List;
 

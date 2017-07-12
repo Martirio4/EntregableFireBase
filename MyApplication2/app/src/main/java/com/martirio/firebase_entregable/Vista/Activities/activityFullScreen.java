@@ -1,10 +1,11 @@
-package com.martirio.firebase_entregable;
+package com.martirio.firebase_entregable.Vista.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.martirio.firebase_entregable.R;
 import com.squareup.picasso.Picasso;
 
 public class activityFullScreen extends AppCompatActivity {

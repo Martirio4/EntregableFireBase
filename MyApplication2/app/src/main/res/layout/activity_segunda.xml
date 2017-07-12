@@ -5,7 +5,7 @@
     android:background="#263238"
     android:orientation="horizontal"
     android:layout_height="match_parent"
-    tools:context="com.martirio.firebase_entregable.SegundaActivity">
+    tools:context="com.martirio.firebase_entregable.Vista.Activities.SegundaActivity">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_marginLeft="8dp"
@@ -42,16 +42,40 @@
         android:layout_margin="4dp"
         android:layout_weight="33"
         android:layout_marginTop="16dp"
+        android:onClick="tomarFoto"
         android:layout_centerHorizontal="true"
         android:background="@drawable/boton"
-        android:text="subir"/>
+        android:text="Subir Foto"/>
 </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titulopinturas"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/linear_botones"
+        android:text="Pinturas Famosas"/>
+
 <android.support.v7.widget.RecyclerView
     android:layout_width="match_parent"
     android:layout_marginTop="16dp"
     android:id="@+id/recyclerImagenes"
-    android:layout_below="@id/linear_botones"
+    android:layout_below="@id/titulopinturas"
     android:layout_height="wrap_content">
-
 </android.support.v7.widget.RecyclerView>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/recyclerImagenes"
+    android:id="@+id/tituloFotos"
+    android:layout_marginTop="8dp"
+    android:text="Fotos Subidas"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:id="@+id/recyclerFotos"
+        android:layout_below="@id/tituloFotos"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
 </android.widget.RelativeLayout>
