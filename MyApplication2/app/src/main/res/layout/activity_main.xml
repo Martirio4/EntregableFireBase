@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.martirio.firebase_entregable.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:id="@+id/fakeLogin"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+
+
+            android:src="@drawable/facebookdefinitivo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#5ea8dc"
+
+            android:text="Facebook login"
+            android:layout_height="wrap_content" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:textColor="#d1383f"
+        android:textStyle="bold"
+        android:text="MoMA"
+        android:id="@+id/titulo"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        />
+    <ProgressBar
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+
+            android:scaleType="fitXY"
+            android:id="@+id/loginBtn"
+            android:background="@android:color/transparent"
+            android:src="@drawable/twitterdefinitivo"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/loginBtn"
+            android:layout_gravity="center"
+
+            android:textColor="#5ea8dc"
+            android:text="Twitter login"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</android.widget.RelativeLayout>

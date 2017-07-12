@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "313225649027",
+    "firebase_url": "https://entregablemrfirebase.firebaseio.com",
+    "project_id": "entregablemrfirebase",
+    "storage_bucket": "entregablemrfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313225649027:android:d3aeff1e41c0e02b",
+        "android_client_info": {
+          "package_name": "com.martirio.firebase_entregable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313225649027-lpt8i8r813m2gju91qnffv2rumfsc3eg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.martirio.firebase_entregable",
+            "certificate_hash": "7161bf36308478fc3c9ed5b159f496b065db8668"
+          }
+        },
+        {
+          "client_id": "313225649027-vgopat6rgrmtcqdv77u21917f3551t15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi8wrxWmsrURXCQ4WD5BYMalkmcWVuxh4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313225649027-vgopat6rgrmtcqdv77u21917f3551t15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
