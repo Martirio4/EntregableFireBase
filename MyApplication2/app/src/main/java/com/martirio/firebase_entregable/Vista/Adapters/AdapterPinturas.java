@@ -25,7 +25,6 @@ import java.util.List;
 public class AdapterPinturas extends RecyclerView.Adapter{
     private Context context;
     private List<Paint> listaPinturasOriginales;
-   
 
     public void setContext(Context context) {
         this.context = context;
