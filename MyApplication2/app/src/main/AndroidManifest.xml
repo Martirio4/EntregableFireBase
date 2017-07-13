@@ -39,7 +39,10 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".Vista.Activities.SegundaActivity" />
+        <activity android:name=".Vista.Activities.SegundaActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            />
         <activity android:name=".Vista.Activities.activityFullScreen"></activity>
     </application>
 

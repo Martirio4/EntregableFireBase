@@ -26,17 +26,6 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_bajar"
-        android:textColor="#ffffff"
-        android:layout_margin="4dp"
-        android:layout_weight="33"
-        android:layout_marginTop="16dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/boton"
-        android:text="bajar"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/btn_subir"
         android:textColor="#ffffff"
         android:layout_margin="4dp"
@@ -51,7 +40,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/titulopinturas"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:textColor="#ffffff"
         android:layout_below="@id/linear_botones"
         android:text="Pinturas Famosas"/>
 
@@ -68,6 +60,9 @@
     android:layout_height="wrap_content"
     android:layout_below="@id/recyclerImagenes"
     android:id="@+id/tituloFotos"
+    android:textSize="20sp"
+    android:textColor="#ffffff"
+    android:layout_marginLeft="8dp"
     android:layout_marginTop="8dp"
     android:text="Fotos Subidas"/>
     <android.support.v7.widget.RecyclerView

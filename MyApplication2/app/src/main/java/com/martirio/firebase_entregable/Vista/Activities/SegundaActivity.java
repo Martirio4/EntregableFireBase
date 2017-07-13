@@ -143,16 +143,20 @@ public class SegundaActivity extends AppCompatActivity {
 
                 List<Artist> listaArtistas = new ArrayList<Artist>();
                 for (DataSnapshot artistSnaptshot: dataSnapshot.getChildren()) {
-
                     Artist artista = artistSnaptshot.getValue(Artist.class);
-                    listaArtistas.add(artista);
+                        listaArtistas.add(artista);
                 }
-                for (Artist unArtista:listaArtistas
-                     ) {
-                    for (Paint unaPintura:unArtista.getPaints()
+                if (listaArtistas.size()>=1) {
+                    for (Artist unArtista:listaArtistas
                          ) {
-                            descargarImagen(unArtista, unaPintura);
+                        for (Paint unaPintura:unArtista.getPaints()) {
+                            if (listaPinturas.contains(unaPintura)){}
+                            else{
+                                descargarImagen(unArtista, unaPintura);
+                            }
+                        }
                     }
+                } else {
                 }
             }
 
@@ -169,15 +173,21 @@ public class SegundaActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                List<Paint> listaPintuas = new ArrayList<Paint>();
-                for (DataSnapshot paintSnapShot: dataSnapshot.getChildren()) {
 
-                    Paint pintura = paintSnapShot.getValue(Paint.class);
-                    listaPintuas.add(pintura);
+                for (DataSnapshot paintSnapShot: dataSnapshot.getChildren()) {
+                    Paint foto = paintSnapShot.getValue(Paint.class);
+                    if (foto != null && !foto.getName().isEmpty()) {
+                        if (listaFotos.contains(foto)) {
+                        } else {
+                            listaFotos.add(foto);
+                        }
+                    }
                 }
-                for (Paint unaPintura:listaPintuas
-                        ) {
-                    descargarFoto(unaPintura);
+                if (listaFotos.size() >= 1) {
+                    for (Paint unaPintura : listaFotos
+                            ) {
+                        descargarFoto(unaPintura);
+                    }
                 }
             }
 
@@ -188,9 +198,6 @@ public class SegundaActivity extends AppCompatActivity {
             }
         });
 
-        //ACTUALIZAR LISTA PINTURAS
-        FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference imagesref = storage.getReference();
 
     }
     public void descargarFotos(){
@@ -238,8 +245,14 @@ public class SegundaActivity extends AppCompatActivity {
                 Paint unaPinturita= new Paint();
                 unaPinturita.setImage(uri.toString());
                 unaPinturita.setName(unaPintura.getName());
-                adapterFotos.agregarPintura(unaPinturita);
-                adapterFotos.notifyDataSetChanged();
+                List<Paint>unaLista=adapterFotos.getlistaPinturasOriginales();
+                if (unaLista.contains(unaPinturita)) {
+                }
+                else{
+                    adapterFotos.agregarPintura(unaPinturita);
+                    adapterFotos.notifyDataSetChanged();
+                }
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -348,6 +361,7 @@ public class SegundaActivity extends AppCompatActivity {
                 listaFotos.add(foto);
                 adapterFotos.notifyDataSetChanged();
 
+                //agrego la foto a la database
                 DatabaseReference databaseReference =mDatabase.child("fotos");
                 databaseReference.push().setValue(foto);
 

@@ -32,4 +32,15 @@ public class Paint {
     public String toString() {
         return name;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Paint unaPintura=(Paint) obj;
+        if (this.name==unaPintura.getName()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }

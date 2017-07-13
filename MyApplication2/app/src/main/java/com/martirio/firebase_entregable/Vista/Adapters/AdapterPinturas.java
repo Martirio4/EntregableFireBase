@@ -109,7 +109,9 @@ public class AdapterPinturas extends RecyclerView.Adapter{
             Picasso.with(imageView.getContext())
                     .load(unaPintura.getImage())
                     .placeholder(R.drawable.loading)
+                    .rotate(45)
                     .into(imageView);
+
         }
 
 

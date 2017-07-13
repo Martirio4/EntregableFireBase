@@ -35,4 +35,6 @@ public class Artist {
     public String toString() {
         return name+" "+paints;
     }
+
+
 }
